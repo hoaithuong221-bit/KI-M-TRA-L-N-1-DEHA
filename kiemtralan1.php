@@ -1,5 +1,5 @@
-// Câu 8: Viết function giải phương trình bậc 2
 <?php
+// Câu 8: Viết function giải phương trình bậc 2
 function giaiPTBac2($a, $b, $c) {
     if ($a == 0) {
         // Trường hợp phương trình bậc 1: bx + c = 0
@@ -29,31 +29,30 @@ function giaiPTBac2($a, $b, $c) {
         return "Phương trình có 2 nghiệm phân biệt: x1 = $x1, x2 = $x2";
     }
 }
+echo giaiPTBac2(1, -3, 2) . "\n";
 
 // Câu 9: Viết function in ra màn hình chữ nhật rỗng có kích thước 5x7 sử dụng dấu sao ( dùng vòng lặp)
-
-<?php
 // Function in ra chữ nhật rỗng 5x7
-function inChuNhatRong($height = 5, $width = 7) {
+function inChuNhat($height, $width) {
     for ($i = 1; $i <= $height; $i++) {
         for ($j = 1; $j <= $width; $j++) {
-            // In dấu * ở viền
+    
             if ($i == 1 || $i == $height || $j == 1 || $j == $width) {
                 echo "*";
             } else {
                 echo " ";
             }
         }
-        echo "<br>"; 
+        echo "\n"; 
     }
 }
- 
+ inChuNhat(5,7);
+
 // Câu 10 Viết function tính trung bình cộng của mảng
-<?php
 function tinhTrungBinh($arr) {
     // Kiểm tra mảng rỗng
     if (count($arr) == 0) {
-        return null; // hoặc có thể trả về 0 tuỳ yêu cầu
+        return null; 
     }
 
     $tong = 0;
@@ -63,5 +62,8 @@ function tinhTrungBinh($arr) {
 
     $trungBinh = $tong / count($arr);
     return $trungBinh;
+    
 }
+$mang = [2, 4, 6, 8, 10];
+echo "Trung bình cộng = " . tinhTrungBinh($mang) . "\n";
 
